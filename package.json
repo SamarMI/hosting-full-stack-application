@@ -6,7 +6,8 @@
         "backend:build": "cd udagram-api && npm run build",
         "frontend:deploy": "cd udagram-frontend && npm run deploy",
         "backend:deploy": "cd udagram-api && npm run deploy",
-        "backend:aws-eb": "cd udagram-api && npm run aws-eb"
+        "backend:aws-eb": "cd udagram-api && npm run aws-eb",
+        "region-set": "aws configure set region us-east-1"
 
 
     },
