@@ -59,16 +59,7 @@ jobs:
           name: Front-End Deploy
           command: |
             npm run frontend:deploy
-# Test the BackEnd 
-      - run:
-          name: Back-End Testing
-          command: |
-            npm run backend:test
-# Test the frontend 
-      - run:
-          name: Front-End Tests
-          command: |
-            npm run frontend:test
+
 workflows:
   version: 2
   build-and-deploy:
