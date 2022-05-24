@@ -7,9 +7,6 @@
   - [Environment Variables](#environment-variables)
   - [Pipeline](#pipeline)
   - [CircleCi](#circleci)
-  - [Testing](#testing)
-    - [Unit Tests:](#unit-tests)
-    - [End to End Tests:](#end-to-end-tests)
   - [Built With](#built-with)
 
 ---
@@ -74,11 +71,15 @@ Setup the following variables in the .env file or in the cloud environments:
 From the root of the project:
 - `npm run frontend:install`    - To install frontend dependencies.
 - `npm run frontend:build`      - To build the Angular/Frontend.
+- `npm run region-set`      - To set AWS Region.
+           
 - `npm run frontend:deploy`     - To deploy the project to S3 using `./udagram-frontend/bin/deploy.sh` deploy script.
 - `npm run backend:install`     - To install backend dependencies.
 - `npm run backend:build`       - To transpile the Typescript/Backend.
 - `npm run backend:aws-eb`      - To Install AWS-EB using `./udagram-api/bin/aws-eb.sh` install script.
 - `npm run backend:deploy`      - To deploy the project to EB using `./udagram-api/bin/deploy.sh` deploy script.
+
+
 ## CircleCi
 
 The order of the run jobs:
@@ -88,35 +89,22 @@ The order of the run jobs:
 - Install AWS CLI v2.
 - Check & Disable AWS pager.
 - Configure AWS AccessKeyID.
+- Setting up Elastic Beanstalk CLI 
+- Frontend-Install dependencies.
+- Backend-Install dependencies.
+- Frontend-Build the angular
+- Backend-Build .
+- Backend-Install AWS Elastic Beanstalk CLI.
 - Configure AWS Region.
-- Frontend:
-  - Install dependencies.
-  - Build the angular.
-  - Deploy the site to AWS S3.
-- Backend:
-  - Install dependencies.
-  - Change The main entry point in package.json.
-  - Transpile the typescript/ build the app.
-  - Install AWS Elastic Beanstalk CLI.
-  - Deploy the app to AWS Elastic Beanstalk.
+- Backend-Deploy the app to AWS Elastic Beanstalk.
+- Frontend-Deploy the site to AWS S3.
 
-## Testing
 
-This project contains two different test suite: unit tests and End-To-End tests(e2e). Follow these steps to run the tests.
 
-1. `cd udagram-frontend`
-2. `npm run test`
-3. `npm run e2e`
 
-There are no Unit test on the back-end
 
-### Unit Tests:
 
-Unit tests are using the Jasmine Framework.
 
-### End to End Tests:
-
-The e2e tests are using Protractor and Jasmine.
 
 ## Built With
 
