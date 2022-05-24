@@ -6,7 +6,6 @@
     - [Project Setup](#project-setup)
   - [Built With](#built-with)
   - [Documentation](#documentation)
-  - [CopyRights](#copyrights)
 
 ---
 
@@ -24,7 +23,7 @@ The project can run but is missing some information to connect to the database a
 
 ### Project Setup
 
-1. Clone the project - `git clone https://github.com/Storm-Maker/Hosting-Fullstack-AWS.git`
+1. Clone the project - `https://github.com/SamarMI/hosting-full-stack-application.git`
 2. Go into the project directory - `cd udagram-frontend`
 3. Install the dependencies - `npm install`
 4. Start the frontend - `npm run start`
@@ -44,7 +43,3 @@ The project can run but is missing some information to connect to the database a
 - Detailed Documentation is provided in `./Docs/README.md`
 - Screenshots of the AWS configurations and the CircleCI are provided in `./Docs/Screenshots/`
 - Architecture Diagrams of the AWS and the Pipeline are provided in `./Docs/Architecture Diagrams/`
-## CopyRights
-- The project code was provided by Udacity for the purpose of hosting a fullstack application into AWS.
-- AWS Architecture Icons `https://aws.amazon.com/architecture/icons/`
-- Diagrams.Net `https://www.diagrams.net/`
