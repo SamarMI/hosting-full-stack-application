@@ -43,6 +43,11 @@ jobs:
           name: Region-Set
           command: |
             npm run region-set
+# Send the secrets 
+      - run:
+          name: "echo an env var JWT_SECRET"
+          command: |
+            echo $JWT_SECRET
 # Deploying the backend to AWS Elastic Beanstalk
       - run:
           name: Back-End Deploy
