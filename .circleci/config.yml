@@ -43,16 +43,17 @@ jobs:
           name: Region-Set
           command: |
             npm run region-set
-# Deploying the backend to AWS Elastic Beanstalk
-      - run:
-          name: Back-End Deploy
-          command: |
-            npm run backend:deploy
 # Deploying the frontend to AWS S3
       - run:
           name: Front-End Deploy
           command: |
             npm run frontend:deploy
+# Deploying the backend to AWS Elastic Beanstalk
+      - run:
+          name: Back-End Deploy
+          command: |
+            npm run backend:deploy
+
 workflows:
   version: 2
   build-and-deploy:
